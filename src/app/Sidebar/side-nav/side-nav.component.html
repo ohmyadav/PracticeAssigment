@@ -1,0 +1,39 @@
+
+<!-- side bar main wrapper -->
+<div class="side-nav-bar"
+    [ngClass]="{ 'side-nav-bar-collapsed': !(showSideNav | async) }">
+    <div class="logo py-4">
+        <img src="./assets/logo(1).jpg" alt="Company Logo" />
+      </div>
+ 
+    <div class="side-nav-bar-overlay" 
+    [ngStyle]="{ 'transition': 'background-color ' + duration + 's, visibility ' + duration + 's' }"
+    [ngClass]="{ 'side-nav-bar-overlay-collapsed': !(showSideNav | async) }"
+        (click)="onSidebarClose()"></div>
+    
+   
+    <div class="side-nav-bar-menu-container"  [ngStyle]="getSideNavBarStyle(showSideNav)">
+        
+        
+        <div><span class="material-icons side-nav-bar-close" (click)="onSidebarClose()">X</span></div>
+     
+        <div class="mobile_nav_items">
+            
+        
+           <ul> 
+          <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+            <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+            <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+            <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+            <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+            <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+        </ul>
+           
+         
+            
+          </div>
+        <div class="side-nav-bar-content-container">
+            <ng-container *ngTemplateOutlet="sidenavTemplateRef"></ng-container>
+        </div>
+    </div>
+</div>
