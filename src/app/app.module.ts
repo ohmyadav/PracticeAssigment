@@ -20,7 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgOtpInputModule } from 'ng-otp-input';
 
 
-import { SideNavComponent } from './Sidebar/side-nav/side-nav.component';
+
 import { HeaderComponent } from './Header/header/header.component';
 
 
@@ -32,7 +32,7 @@ import { HeaderComponent } from './Header/header/header.component';
     DashboardComponent,
     
     
-    SideNavComponent,
+ 
     HeaderComponent 
    
   ],

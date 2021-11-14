@@ -1,7 +1,7 @@
 import { Component, NgZone, OnInit, ViewEncapsulation } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { ServiceService } from 'src/app/services/service.service';
+
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   userData: any;
   
   constructor(
-    private navService: ServiceService,
+   
     private afAuth: AngularFireAuth,
     private router: Router,
     private ngZone: NgZone
@@ -32,9 +32,6 @@ export class HeaderComponent implements OnInit {
       });
     });
   }
-  toggleSideNav() {
-    this.navService.setShowNav(true);
-  }
-
+ 
 }
 
